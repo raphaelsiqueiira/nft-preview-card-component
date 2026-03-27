@@ -83,7 +83,7 @@ export default class CardInfo {
         this.authorNFT = this.authorNFT.slice(0, maxCharAuthor);
       }
     } else {
-      this.descriptionNFT = "Anonimous";
+      this.authorNFT = "Anonimous";
     }
 
     this.avatarNFT = avatar ?? "./images/circle-user-solid.png";
