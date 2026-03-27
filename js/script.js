@@ -1,7 +1,7 @@
 import CardInfo from "./create-nft-info.js";
 import CriptoPrice from "./cripto-price.js";
 
-const cardInfo = new CardInfo("../data-nft.json");
+const cardInfo = new CardInfo("./data-nft.json");
 const dados = await cardInfo.init();
 
 const ethPrice = new CriptoPrice(
