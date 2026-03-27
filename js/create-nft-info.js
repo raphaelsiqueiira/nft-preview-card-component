@@ -33,6 +33,10 @@ export default class CardInfo {
 
   // Valida se os dados foram passados, caso não adiciona valores padrões
   async validarDados(data) {
+    const maxCharNum = 8;
+    const maxCharName = 15;
+    const maxCharDescription = 180;
+    const maxCharAuthor = 20;
     const {
       number,
       name,
@@ -44,11 +48,44 @@ export default class CardInfo {
       create_at,
     } = data;
 
-    this.numberNFT = number ?? "0";
-    this.nameNFT = name ?? "Sem Nome";
-    this.descriptionNFT = description ?? "Apenas uma NFT sem descrição";
+    if (number !== undefined) {
+      this.numberNFT = number;
+      if (this.numberNFT.length > maxCharNum) {
+        this.numberNFT = this.numberNFT.slice(0, maxCharNum);
+      }
+    } else {
+      this.numberNFT = "0";
+    }
+
+    if (name !== undefined) {
+      this.nameNFT = name;
+      if (this.nameNFT.length > maxCharName) {
+        this.nameNFT = this.nameNFT.slice(0, maxCharName);
+      }
+    } else {
+      this.nameNFT = "Sem nome";
+    }
+
+    if (description !== undefined) {
+      this.descriptionNFT = description;
+      if (this.descriptionNFT.length > maxCharDescription) {
+        this.descriptionNFT = this.descriptionNFT.slice(0, maxCharDescription);
+      }
+    } else {
+      this.descriptionNFT = "Apenas uma NFT sem descrição";
+    }
+
     this.imgNFT = img ?? "./images/image-solid.png";
-    this.authorNFT = author ?? "Anonimous";
+
+    if (author !== undefined) {
+      this.authorNFT = author;
+      if (this.authorNFT.length > maxCharAuthor) {
+        this.authorNFT = this.authorNFT.slice(0, maxCharAuthor);
+      }
+    } else {
+      this.descriptionNFT = "Anonimous";
+    }
+
     this.avatarNFT = avatar ?? "./images/circle-user-solid.png";
 
     // Lógico de preço
