@@ -1,0 +1,27 @@
+:root {
+  --clr-main-bg: hsl(217, 54%, 11%);
+  --clr-card-bg: hsl(216, 50%, 16%);
+  --clr-deco: hsl(215, 32%, 27%);
+  --clr-emphasis: hsl(0, 0%, 100%);
+
+  --clr-primary-1: hsl(215, 51%, 70%);
+  --clr-primary-2: hsl(178, 100%, 50%);
+  --clr-hover:  hsla(178, 100%, 50%, 40%);
+
+  --ff-primary: "Outfit", sans-serif;
+
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-lx: 2rem;
+
+  --radius-md: 0.75rem;
+  --radius-circle: 50%;
+}

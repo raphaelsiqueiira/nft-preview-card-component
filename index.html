@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body data-skeleton>
+
+  <main class="container">
+    <article class="card">
+      <div class="skeleton">
+        <picture class="card__img-container ">
+          <img src="images/image-solid.png" alt="" width="604" height="604" class="card__img" id="card-img">
+        </picture>
+      </div>
+      <section class="card__details">
+        <h1 class="skeleton"><a class="card__title " id="card-title" href="#">Equilibrium #3429</a></h1>
+        <p class="card__description skeleton" id="card-description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="card__nft-info">
+          <p class="card__nft-price skeleton"><span id="nft-price"></span> ETH</p>
+          <p class="card__nft-create-time skeleton" id="create-time"></p>
+        </div>
+      </section>
+      <hr>
+      <section class="card__author-info">
+        <picture class="skeleton">
+          <img class="card__author-avatar " src="images/circle-user-solid.png" alt="" width="132" height="132" id="avatar-img">
+        </picture>
+        <p class="card__author-link skeleton">Creation of <a href="#" id="author">Anonimous</a></p>
+      </section>
+    </article>
+  </main>
+
+  <script type="module" src="./dist/bundle.js"></script>
+</body>
+
+</html>

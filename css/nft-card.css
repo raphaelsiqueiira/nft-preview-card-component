@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-main-bg);
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-1);
+  font-size: var(--fs-md);
+}
+
+.card__img-container {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.card__img-container::after,
+.card__img-container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__img-container::after {
+  background-color: var(--clr-hover);
+  z-index: 10;
+}
+
+.card__img-container::before {
+  z-index: 20;
+  background: url("../images/icon-view.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__img-container:hover::after,
+.card__img-container:hover::before {
+  opacity: 1;
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 21.25rem;
+  margin: 1rem;
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.card__title {
+  color: var(--clr-emphasis);
+  font-size: var(--fs-lg);
+  transition: color 0.3s;
+}
+
+.card__title:hover,
+.card__author-link a:hover {
+  color: var(--clr-primary-2);
+}
+
+.card__nft-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__nft-price {
+  color: var(--clr-primary-2);
+}
+
+.card__nft-create-time,
+.card__nft-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.card__nft-price::before {
+  content: "";
+  display: block;
+  background: url("../images/icon-ethereum.svg") no-repeat center;
+  width: 11px;
+  height: 18px;
+}
+
+.card__nft-create-time::before {
+  content: "";
+  display: block;
+  background: url("../images/icon-clock.svg") no-repeat center;
+  width: 17px;
+  height: 17px;
+}
+
+hr {
+  width: 100%;
+  border: 0.0625rem solid var(--clr-deco);
+}
+
+.card__author-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.card__author-info img {
+  width: 2.875rem;
+  height: 2.875rem;
+  border: 0.0625rem solid var(--clr-emphasis);
+  border-radius: var(--radius-circle);
+}
+
+.card__author-link a {
+  color: var(--clr-emphasis);
+  transition: color 0.3s;
+}
+
+[data-skeleton] .skeleton {
+  background-color: #2a3c50;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-skeleton] .skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--clr-deco);
+  z-index: 100;
+}
